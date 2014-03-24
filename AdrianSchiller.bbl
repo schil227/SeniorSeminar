@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{Farchy:2013:HRL:2484920.2484930}
+A.~Farchy, S.~Barrett, P.~MacAlpine, and P.~Stone.
+\newblock Humanoid robots learning to walk faster: From the real world to
+  simulation and back.
+\newblock In {\em Proceedings of the 2013 International Conference on
+  Autonomous Agents and Multi-agent Systems}, AAMAS '13, pages 39--46,
+  Richland, SC, 2013. International Foundation for Autonomous Agents and
+  Multiagent Systems.
+
+\bibitem{Moore:2013:ESK:2463372.2463402}
+J.~M. Moore, A.~J. Clark, and P.~K. McKinley.
+\newblock Evolution of station keeping as a response to flows in an aquatic
+  robot.
+\newblock In {\em Proceeding of the Fifteenth Annual Conference on Genetic and
+  Evolutionary Computation Conference}, GECCO '13, pages 239--246, New York,
+  NY, USA, 2013. ACM.
+
+\bibitem{Pretorius:2009:TAN:1632149.1632171}
+C.~J. Pretorius, M.~C. du~Plessis, and C.~B. Cilliers.
+\newblock Towards an artificial neural network-based simulator for behavioural
+  evolution in evolutionary robotics.
+\newblock In {\em Proceedings of the 2009 Annual Research Conference of the
+  South African Institute of Computer Scientists and Information
+  Technologists}, SAICSIT '09, pages 170--178, New York, NY, USA, 2009. ACM.
+
+\bibitem{Sipper2011Win}
+M.~Sipper.
+\newblock {\em Evolved to Win}.
+\newblock Lulu, 2011.
+\newblock available at http://www.lulu.com/.
+
+\bibitem{wiki:robotics}
+Wikipedia.
+\newblock Robotics --- wikipedia{,} the free encyclopedia, 2014.
+\newblock [Online; accessed 27-February-2014].
+
+\end{thebibliography}

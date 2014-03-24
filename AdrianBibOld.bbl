@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{Moore:2013}
+Jared M. Moore, Anthony J. Clark, Philip K. McKinley
+\newblock Evolution of Station Keeping as a Response to Flows in an Aquatic Robot
+\newblock Science and Engineering, Michigan State University.
+  July, 2013.
+\newblock \\ {\it An extremely good paper, will use for research. Had a good system to invoke evolution on a robot (which was also rapidly prototyped). Clearly composed, good outcome and even videos of the simulation available.}.
+
+\bibitem{Assembly:2010}
+E.~Schulte, S.~Forrest, and W.~Weimer.
+\newblock Automated program repair through the evolution of assembly code.
+\newblock In {\em Proceedings of the IEEE/ACM International Conference on
+  Automated Software Engineering}, ASE '10, pages 313--316, New York, NY, USA,
+  2010. ACM.
+\newblock \\ {\it This will be a main source for my paper. It talks about
+  evolving programs at assembly language level and its benefits. These authors
+  focus more on doing this to use EC to debug, refactor, and repair programs.
+  It also breifly mentions FINCH }.
+
+\end{thebibliography}
