@@ -166,17 +166,20 @@ In order to understand the complexities behind evolution and robotics, we must d
 	
 	The first study, by Moore $et$ $al.$ ~\cite{Moore:2013:ESK:2463372.2463402}, is a aquatic robot which is tasked with maintaining a particular position while floating on water by  The robot has a cylindrical body with three servo controlled fins; two flippers which have 360$^\circ$ movement range and a caudal (rear) fin which has 30$^\circ$ of movement. The robot is equipped with an inertial measurement unit (IMU) which measures linear and angular acceleration, and is able to provide a 3D coordinate of the robot's current position. The problem being solved here is for the robot to maintain a fixed position on the water while being subject to laminar flows, or water which flows in a common direction. ER was chosen for finding a solution because of the variety of directions the laminar flows could encounter the robot.
 
-\begin{figure}%[H]
+\begin{figure*}%[H]
+\center
   \includegraphics[scale=1]{sr2}
 \caption{The station keeping robot rendered in simulation}
 \label{fig:wRobot}
-\end{figure}
+\end{figure*}
 
 	
 	The next study, conducted by Farchy $et$ $al.$ ~\cite{Farchy:2013:HRL:2484920.2484930}, was to increase the walking speed of a humanoid robot. The robot model known as the Aldebaran Nao (Figure \ref{fig:wRobot}), is programmed by teams to play (robot) soccer in a competition called RoboCup. The process by which  Farchy $et$ $al.$ applied ER was through Grounded Simulation Learning (GSL), which essentially added human guidance to the evolutionary process (more on GSL in section \ref{Moore Evolving}). 
 	
 \begin{figure}%[H]
+\begin{center}
   \includegraphics[scale=1]{wr1}
+\end{center}
 \caption{The Aldebaran Nao Robot}
 \label{fig:wRobot}
 \end{figure}
@@ -199,7 +202,9 @@ Transitivity in this case is defined as inaccuracies between the simulated and p
  The robot walking code modified by Farchy $et$ $al.$ [2] used SimSpark, a simulation based on the RoboCup tournament which also uses the ODE for rigid body movement and collision detection (Figure \ref{fig:wRobot}). It is not a perfect simulation however, and lacks important features such as joint friction. Unlike the station keeping robots, transitivity errors pose more of an issue because of the threat of the physical robot being immobilized (e.g. falling over). Every 20 ms the simulator updates the state of the robot by using sensor information  fed into the simulation. The robot used in the simulator is not the same model as the physical one used by Farchy $et al$, requiring approximations of key features such as the shape of the foot. However, Farchy $et$ $al.$ employed a ``Grounded Simulation Learning'' (GSL) algorithm, which, like the station keeping robot study, was used for finding developed behaviors and, in this case, modifying the evolutionary process from the analysis. GSL also accommodates for inaccuracies in the simulation by routinely analyzing if evolved controllers are indeed applicable to the physical robot.
  
  \begin{figure}%[H]
+ \begin{center}
   \includegraphics[scale=1]{wr2}
+ \end{center}
 \caption{The SimSpark simulation}
 \label{fig:simSpark}
 \end{figure}
@@ -251,8 +256,10 @@ where
   Pretorius $et$ $al.$ used three different simple ANNs to track the robot's position. The input to each of the neural networks consisted of the two motor speeds before receiving the command, the two motor speeds from the current command, and the length of time for the current command. The purpose of using the previous motor command was to account for positive and negative acceleration the robot underwent going from one command to the next; the neural network would have to incorporate that change in order to make an accurate account of it's orientation. The output of the ANNs was either the robot's x-coordinate, y-coordinate, or angle. Figure \ref{fig:ANN} is a visual representation of the ANNs.
   
 \begin{figure}%[H]
+\begin{center}
   \includegraphics[scale=1]{cr2}
 \caption{The ANN for the position tracking controller}
+\end{center}
 \label{fig:ANN}
 \end{figure}
 
@@ -281,13 +288,13 @@ Where $N_{max}$ is the absolute number of rectangles traversed while not enterin
 \subsection{Station Keeping Robot}\label{Moore behavior}
   The evolutionary solutions for the station keeping robot in ~\cite{Moore:2013:ESK:2463372.2463402} were both unforeseen and effective. Depending on the trial, the evolved candidates would range from standard locomotion to complex maneuvers. When the flow was coming from either the front or at a 45$^\circ$ angle to the front left, the simulated robot would swim forward or swim forward while listing to the left. Because of the design of the robot, it is somewhat difficult for it to turn and not move too far away from the starting point. This would make station keeping especially difficult when the flow was coming from the back or side, the robot would drift away as it would turn, resulting in a poor fitness. so instead, when the flow was coming from directly behind the robot, it used a complex maneuver to flip tail-over-head to face the flow and then propelled itself forward to maintain its position (http://y2u.be/UufbnEGFwV4). Figure \ref{fig:robot flip} shows the behavior. This works well because the robot floats, and the flipping movement doesn't cause a change in it's height in the water. The most challenging trial was when the flow came at a 90$^\circ$ angle; because reorienting to such an angle was evidently a major challenge, the evolved behavior incorporated a flipping motion combined with a rolling the body to avoid turning.
  
-\begin{figure}%[H]
-
+\begin{figure*}%[H]
+\center
 \caption{Images from the simulation which showed the evolved behavior when the flow was behind the robot}
 
   \includegraphics[scale=1]{sr1}
 \label{fig:robot flip}
-\end{figure}
+\end{figure*}
 
   Moore $et$ $al.$ ~\cite{Moore:2013:ESK:2463372.2463402} compared early candidates with final candidates to contrast in evolved behaviors. When the flow was coming from behind, an early candidate selected from the 25\textsuperscript{th} generation was pushed by the current straight out of the `rewards zone' (the desired station keeping location). It didn't actually start swimming until 60 seconds into the trail, and was unable to make any progress in the allotted time. In contrast, the final candidate immediately reacts and is able to orient (flip) itself and gain against the flow into the `rewards zone'. 
 % Figure \ref{rewardsZone} compares the final and an earily candidate and their ability to maintain position over time.
@@ -305,13 +312,13 @@ Where $N_{max}$ is the absolute number of rectangles traversed while not enterin
 	
 	The  position tracking robot's ~\cite{Pretorius:2009:TAN:1632149.1632171} three ANN had evolved to be competent at tracking the robots coordinates and angle. The top x-coordinate, y-coordinate, and angle ANNs were tested with 50 commands to test their accuracy, the results are located in <FIGURE >. To validate the experiment, Pretorius $et$ $al.$ tested the navigation controller evolved with the ANNs. \ref{fig:position tracking grid} shows the results of the navigational test controller, which used 13 commands to navigate around the grid. Pretorius $et$ $al.$ were satisfied with the results, noting that they were able to accomplish the specified task without any manual robotic programming. The simulated and actual paths were reasonably close to one another, meaning that the ANNs were able to achieve a relatively accurate account of the position and orientation of the robot. The error between the actual and simulated run was expected because slight errors tended to compound, i.e. after each command the simulator would be slightly inaccurate plus the sum of the previous command's inaccuracies. 
 	
-\begin{figure}%[H]
-
+\begin{figure*}%[H]
+\center
 \caption{Predicted and actual robot paths from the navigation controller, which used 13 commands}
 
   \includegraphics[scale=1]{cr3}
 \label{fig:position tracking grid}
-\end{figure}
+\end{figure*}
 	  
 \section{Conclusions}\label{conclusion}
 
