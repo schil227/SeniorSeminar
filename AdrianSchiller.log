@@ -1,41 +1,47 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.13 (TeX Live 2013/dev) (format=pdflatex 2013.9.26)  24 MAR 2014 16:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.24)  25 MAR 2014 11:26
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**AdrianSchiller.tex
-(./AdrianSchiller.tex
+**D:/Java/Adrian's*JAVA*Programs/workspace/SeniorSeminar/AdrianSchiller.tex
+("D:/Java/Adrian's JAVA Programs/workspace/SeniorSeminar/AdrianSchiller.tex"
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
-aded.
-(./sig-alternate.cls
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("D:\Java\Adrian's JAVA Programs\workspace\SeniorSeminar\sig-alternate.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
@@ -46,10 +52,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen104
 \epsfysize=\dimen105
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -57,24 +63,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip41
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen106
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen107
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count80
@@ -115,18 +121,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count92
@@ -141,7 +147,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen121
 \Gm@layoutvoffset=\dimen122
 \Gm@dimlist=\toks21
-)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 University of Minnesota, Morris, Computer Science Senior Seminar
 format, based almost entirely
 on the ACM document class 'sig-alternate', 22 Apr 2009. See
@@ -168,7 +175,7 @@ for more info and to make suggestions and changes.
 \titleboxnoteflag=\count103
 Document Class: sig-alternate 2009/04/22 - V2.4 - based on acmproc.cls V1.3 <No
 v. 30 '99>
-(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -200,29 +207,31 @@ LaTeX Info: Redefining \cite on input line 1248.
 \acmcopyr=\toks34
 \boilerplate=\toks35
 \copyrightetc=\toks36
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
-(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-(./AdrianSchiller.aux)
-\openout1 = `AdrianSchiller.aux'.
+("D:\Java\Adrian's JAVA Programs\workspace\SeniorSeminar\AdrianSchiller.aux"
 
+LaTeX Warning: Label `fig:wRobot' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
@@ -235,8 +244,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen131
@@ -249,50 +257,7 @@ LaTeX Font Info:    ... okay on input line 60.
 \MPnumerator=\count116
 \makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks38
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -328,17 +293,17 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 119.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 119.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 119.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 Underfull \hbox (badness 5316) in paragraph at lines 119--119
@@ -350,75 +315,131 @@ Overfull \hbox (4.81873pt too wide) in paragraph at lines 131--132
 \T1/aer/m/n/9 Evolutionary Robotics, Evo-lu-tion-ary Com-pu-ta-tion, Robotics,
  []
 
-
-Underfull \vbox (badness 2495) has occurred while \output is active []
-
- [1{/usr/share/texlive/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<sr2.pdf, id=12, 502.60358pt x 81.98972pt>
+File: sr2.pdf Graphic file (type pdf)
+ <use sr2.pdf>
+Package pdftex.def Info: sr2.pdf used on input line 170.
+(pdftex.def)             Requested size: 502.60236pt x 81.9895pt.
 
- [2]
-Overfull \hbox (14.82965pt too wide) in paragraph at lines 184--184
+Overfull \hbox (262.60236pt too wide) in paragraph at lines 170--171
+[][] 
+ []
+
+
+LaTeX Warning: Reference `(' on page \thepage  undefined on input line 176.
+
+<wr1.pdf, id=13, 159.88pt x 119.86833pt>
+File: wr1.pdf Graphic file (type pdf)
+ <use wr1.pdf>
+Package pdftex.def Info: wr1.pdf used on input line 179.
+(pdftex.def)             Requested size: 159.87961pt x 119.86803pt.
+
+
+LaTeX Warning: Reference `pRobot' on page \thepage  undefined on input line 184
+.
+
+<cr1.pdf, id=14, 238.0695pt x 286.08351pt>
+File: cr1.pdf Graphic file (type pdf)
+ <use cr1.pdf>
+Package pdftex.def Info: cr1.pdf used on input line 187.
+(pdftex.def)             Requested size: 238.06891pt x 286.08281pt.
+ [2 <D:/Java/Adrian's JAVA Programs/workspace/SeniorSeminar/sr2.pdf> <D:/Java/A
+drian's JAVA Programs/workspace/SeniorSeminar/wr1.pdf>]
+Overfull \hbox (14.82965pt too wide) in paragraph at lines 205--205
 []\secfnt NEURAL NET-WORK, EX-PER-I-MENT, AND
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 208.
+[3 <D:/Java/Adrian's JAVA Programs/workspace/SeniorSeminar/cr1.pdf>]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 229.
 
-(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (1.33055pt too wide) in paragraph at lines 215--216
+Overfull \hbox (1.33055pt too wide) in paragraph at lines 236--237
 \T1/aer/m/n/9 des-ti-na-tion. All of the \T1/aett/m/n/9 Dis-tance-Trav-eled \T1
 /aer/m/n/9 val-ues are summed
  []
 
-[3]
-Underfull \vbox (badness 1558) has occurred while \output is active []
+<cr2.pdf, id=159, 222.06483pt x 133.37227pt>
+File: cr2.pdf Graphic file (type pdf)
+ <use cr2.pdf>
+Package pdftex.def Info: cr2.pdf used on input line 248.
+(pdftex.def)             Requested size: 222.06429pt x 133.37193pt.
 
- [4]
-<cr3.pdf, id=29, 430.855pt x 274.11981pt>
-File: cr3.pdf Graphic file (type pdf)
- <use cr3.pdf>
-Package pdftex.def Info: cr3.pdf used on input line 266.
-(pdftex.def)             Requested size: 430.85394pt x 274.11913pt.
+Underfull \vbox (badness 1057) has occurred while \output is active []
 
-Overfull \hbox (190.85394pt too wide) in paragraph at lines 266--268
- [][] 
+ [4 <D:/Java/Adrian's JAVA Programs/workspace/SeniorSeminar/cr2.pdf>]
+<sr1.pdf, id=185, 469.2482pt x 144.26437pt>
+File: sr1.pdf Graphic file (type pdf)
+ <use sr1.pdf>
+Package pdftex.def Info: sr1.pdf used on input line 282.
+(pdftex.def)             Requested size: 469.24706pt x 144.264pt.
+
+Overfull \hbox (229.24706pt too wide) in paragraph at lines 282--284
+[][]
  []
 
-(./AdrianSchiller.bbl) [5] [6
+<cr3.pdf, id=186, 430.855pt x 274.11981pt>
+File: cr3.pdf Graphic file (type pdf)
+ <use cr3.pdf>
+Package pdftex.def Info: cr3.pdf used on input line 306.
+(pdftex.def)             Requested size: 430.85394pt x 274.11913pt.
 
- <./cr3.pdf>] (./AdrianSchiller.aux) ) 
+Overfull \hbox (190.85394pt too wide) in paragraph at lines 306--308
+[][]
+ []
+
+
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+ [5 <D:/Java/Adrian's JAVA Programs/workspace/SeniorSeminar/sr1.pdf>]
+("D:\Java\Adrian's JAVA Programs\workspace\SeniorSeminar\AdrianSchiller.bbl")
+[6 <D:/Java/Adrian's JAVA Programs/workspace/SeniorSeminar/cr3.pdf>]
+("D:\Java\Adrian's JAVA Programs\workspace\SeniorSeminar\AdrianSchiller.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3356 strings out of 495063
- 43484 string characters out of 3182194
- 113980 words of memory out of 3000000
- 6443 multiletter control sequences out of 15000+200000
+ 3048 strings out of 493921
+ 38085 string characters out of 3147279
+ 104838 words of memory out of 3000000
+ 6266 multiletter control sequences out of 15000+200000
  54831 words of font info for 76 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 41i,11n,28p,1361b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
-mex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
-uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on AdrianSchiller.pdf (6 pages, 434787 bytes).
+ 841 hyphenation exceptions out of 8191
+ 41i,11n,28p,1464b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+tt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
+helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on AdrianSchiller.pdf (6 pages, 9396965 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 296 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

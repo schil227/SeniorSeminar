@@ -142,11 +142,13 @@ Adrian T. Schiller \\
  Yet, means do exist to apply evolution to robotics, an area known as Evolutionary Robotics (ER). The purpose of this paper is to analyze what methods are used to create the evolutionary process for physical machines, the effectiveness of their outcomes, and the general feasibility of ER.
  
  This paper will analyze three different research cases involving evolutionary robotics. By noting their similarities and differences, some idea can be generated of what ER requires. The research outcomes will demonstrate the effectiveness of the evolutionary process.
+
+   Section \ref{background}  has the background infromation, including evolutionary computation, neural networks, and the research cases this paper is based on. Section \ref{simulation} covers robotic simulation and how it's used, section \ref{evolution} gives the details about the evolutionary robotics. and section \ref{behavior} discusses behaviors of the evolved robots. Lastly, section \ref{conclusion} is the conclusion.
  
- Roadmap goes here 
  
 %\section{The {\secit Body} of The Paper}\label{main}
 \section{Background}\label{background}
+In order to understand the complexities behind evolution and robotics, we must define the evolutionary computation, genetic algorithms,  and neural networks, as well as introduce some research cases.
 
  \subsection{Evolutionary Computation}\label{background EC}
   Evolutionary computation (EC) is described by Sipper ~\cite{Sipper2011Win} as solving a problem by tweaking a population of candidates and evaluating them by some quantifiable fitness. This process then repeats until a suitable candidate can be found or a set limit is reached (e.g. time). The concept can be compared to natural genetics and evolution.
@@ -156,17 +158,36 @@ Adrian T. Schiller \\
   An example problem which we can apply GA is ``OnesMax" Suppose there is a population of $p$ candidates which are arrays of length $n$ whose elements are randomly set either zero or one, and the goal is to evolve a candidate array that consists of entirely ones. In the first iteration, I would apply the fitness function which would return the number of ones in an array, and then sort the population of candidates from greatest fitness to least. Then, I would choose some subset of $m$ individuals to populate the next array of candidates ($m$ for example, could contain the 20 best individuals). The $m$ candidates that move on would then be used to create the next generation of candidate arrays via cross-over/mutation until $p$ candidates are constructed. In this example, the crossover process would take two fit candidate arrays and swap parts from either array to make a new candidate; this candidate may also undergo some mutated. This process then continues until a suitable candidate is reached, or a time/iteration limit is reached. The result would be the best candidate (i.e. the candidate with the highest fitness) which would (in this example) contain the most ones.
   
 \subsection{Neural Networks}
-	A Neural Network (NN) is a ???model-free algorithm??? which is based loosely on the central nervous system in biology. In EC, Artificial Neural Networks (ANNs) are used instead of NN to distinguish between a physical neural network and those artificially generated in software programs. The model is a collection of nodes (``neurons") which are connected in a network. The ANN has three general layers: input, middle, and output. The input layer is simply composed of whatever input is provided; in the case of a robot, it could be motor controllers and other sensors used by the robot. Each sensor or motor would be a separate node. The middle layer is the hidden layer where the evolutionary process occurs. From the genetic algorithm example in \ref{background EC}, instead of swapping bits in an array, the nodes of a neural network would be what is primarily swapped, changing the node network. The middle layer is not necessarily only one layer, but for the purposes of this paper it is considered as one single layer. The output layer is the result of the computation from the input layer and hidden middle layer.
+	A Neural Network (NN) is an algorithm which is based loosely on the central nervous system in biology. In EC, Artificial Neural Networks (ANNs) are used instead of NN to distinguish between a physical neural network and those artificially generated in software programs. The model is a collection of nodes (``neurons") which are connected in a network. The ANN has three general layers: input, middle, and output. The input layer is simply composed of whatever input is provided; in the case of a robot, it could be motor controllers and other sensors used by the robot. Each sensor or motor would be a separate node. The middle layer is the hidden layer where the evolutionary process occurs. From the genetic algorithm example in \ref{background EC}, instead of swapping bits in an array, the nodes of a neural network would be what is primarily swapped, changing the node network. The middle layer is not necessarily only one layer, but for the purposes of this paper it is considered as one single layer. The output layer is the result of the computation from the input layer and hidden middle layer.
   
   
   \subsection{Research Cases}
 	In this paper I will compare and contrast three separate research cases which used Evolutionary Robotics. Each research study used three common methods to apply evolution to a physical robot; a simulation, an evolutionary process, and analyzing the behavior of evolved candidates.
 	
-	The first study, by Moore $et$ $al.$ ~\cite{Moore:2013:ESK:2463372.2463402}, is a aquatic robot which is tasked with maintaining a particular position while floating on water by  The robot has a cylindrical body with three servo controlled fins; two flippers which have 360$^\circ$ movement range and a caudal (rear) fin which has 30$^\circ$ of movement. The robot is equipped with an inertial measurement unit (IMU) which measures linear and angular acceleration, and is able to provide a 3D coordinate of the robot's current position. The problem being solved here is for the robot to maintain a fixed position on the water while being subject to laminar flows, or water which flows in a common direction (CITE wiki). ER was chosen for finding a solution because of the variety of directions the laminar flows could encounter the robot.
+	The first study, by Moore $et$ $al.$ ~\cite{Moore:2013:ESK:2463372.2463402}, is a aquatic robot which is tasked with maintaining a particular position while floating on water by  The robot has a cylindrical body with three servo controlled fins; two flippers which have 360$^\circ$ movement range and a caudal (rear) fin which has 30$^\circ$ of movement. The robot is equipped with an inertial measurement unit (IMU) which measures linear and angular acceleration, and is able to provide a 3D coordinate of the robot's current position. The problem being solved here is for the robot to maintain a fixed position on the water while being subject to laminar flows, or water which flows in a common direction. ER was chosen for finding a solution because of the variety of directions the laminar flows could encounter the robot.
+
+\begin{figure}%[H]
+  \includegraphics[scale=1]{sr2}
+\caption{The station keeping robot rendered in simulation}
+\label{fig:wRobot}
+\end{figure}
+
 	
-	The next study, conducted by Farchy $et$ $al.$ ~\cite{Farchy:2013:HRL:2484920.2484930}, was to increase the walking speed of a humanoid robot. The robot model known as the Aldebaran Nao, is programmed by teams to play (robot) soccer in a competition called RoboCup. The process by which  Farchy $et$ $al.$ applied ER was through Grounded Simulation Learning (GSL), which essentially added human guidance to the evolutionary process (more on GSL in section \ref{Moore Evolving}). 
+	The next study, conducted by Farchy $et$ $al.$ ~\cite{Farchy:2013:HRL:2484920.2484930}, was to increase the walking speed of a humanoid robot. The robot model known as the Aldebaran Nao (Figure \ref(wRobot)), is programmed by teams to play (robot) soccer in a competition called RoboCup. The process by which  Farchy $et$ $al.$ applied ER was through Grounded Simulation Learning (GSL), which essentially added human guidance to the evolutionary process (more on GSL in section \ref{Moore Evolving}). 
 	
-	The final study, by Pretorius $et$ $al.$ ~\cite{Pretorius:2009:TAN:1632149.1632171}, created a Lego Mindstorm robot which would track its own position and heading from an evolved controller. Because tracking a robot without sensory input is difficult, ER was applied to create a correlation between motor movement and location/orientation. The robot consists of two motorized wheels and has two blue and purple tracking markers on the top, as well as a light sensor. The markers and light sensor were used by an overhead camera to collect position and orientation information which was used to train the controller.
+\begin{figure}%[H]
+  \includegraphics[scale=1]{wr1}
+\caption{The Aldebaran Nao Robot}
+\label{fig:wRobot}
+\end{figure}
+
+	The final study, by Pretorius $et$ $al.$ ~\cite{Pretorius:2009:TAN:1632149.1632171}, created a Lego Mindstorm robot which would track its own position and heading from an evolved controller (Figure \ref{pRobot}). Because tracking a robot without sensory input is difficult, ER was applied to create a correlation between motor movement and location/orientation. The robot consists of two motorized wheels and has two blue and purple tracking markers on the top, as well as a light sensor. The markers and light sensor were used by an overhead camera to collect position and orientation information which was used to train the controller.
+
+\begin{figure}%[H]
+  \includegraphics[scale=1]{cr1}
+\caption{The position tracking robot}
+\label{fig:pRobot}
+\end{figure}
 	
 \section{Simulation}\label{simulation}
 Evolution in robotics is expensive because of the overhead of running trials in real time and setting up the robot to be identical for each test. Simulation is valuable because it can explore the space of ER without requiring setup and at an accelerated rate. Simulation is the representation of characteristics or behavior of one system through the use of another system (CITE), simulation provides a means through which a robot replica can be rapidly altered and evaluated, thereby enabling the evolutionary process to occur. (Discuss state change in simulator?)  However, because simulations are often imperfect, there is some measure of error by transitivity.
@@ -217,11 +238,18 @@ where
   Farchy $et$ $al.$ ~\cite{Farchy:2013:HRL:2484920.2484930} used an algorithm slightly different from GA called Co-variance Matrix Adaptation Evolution Strategy (CMA-ES). The main difference between the two is CMA-ES tracks a co-variance matrix of parameters which perform well, thereby drawing a correlation between well performing candidates and their parameters. Instead of sorting solely by fitness like GA, it sorts by these parameters and repopulates the next generation by the upper mean of the previous generation.
   
   One of the most interesting consepts done by Farchy $et$ $al.$ ~\cite{Farchy:2013:HRL:2484920.2484930} and the focus of their research was the use of Grounded Simulation Learning (GSL). GSL is essentially tweaking the process of evolution as it evolves to focus on different things. In this particular case, after the first iteration of evolution the team uploaded the candidate to the physical robot and noticed that the leg swing parameter seemed to play an important role in the speed of the robot. The next iteration was then adjusted to have greater variation in the swing parameter to be used in the CMA-ES algorithm.
+
   \subsection{Position Tracking Robot}\label{Pretorius Evolving}
-  To train the position tracking robot's ANN, the robot was issued commands. These commands consisted of three things: motor speed for the both motors, and the execution time for the command in milliseconds. The commands randomly generated the motor speed, which ranged up to 50\% of the maximum motor speed, the a direction of the motor, and a time ranging from .5 to 3 seconds. Although random, the seed was bias to have the motors go in the same direction at an equal speed (straight movement) 30\% of the time, as well as both motor speeds to equal 0 (stopping the robot) 20\% of the time. This was because  Pretorius $et$ $al.$ felt that these would be common commands, and should be represented well in the simulation.
+  To train the position tracking robot's ANN, the robot was issued commands ~\cite{Pretorius:2009:TAN:1632149.1632171}. These commands consisted of three things: motor speed for the both motors, and the execution time for the command in milliseconds. The commands randomly generated the motor speed, which ranged up to 50\% of the maximum motor speed, the a direction of the motor, and a time ranging from .5 to 3 seconds. Although random, the seed was bias to have the motors go in the same direction at an equal speed (straight movement) 30\% of the time, as well as both motor speeds to equal 0 (stopping the robot) 20\% of the time. This was because  Pretorius $et$ $al.$ felt that these would be common commands, and should be represented well in the simulation.
   
-  Pretorius $et$ $al.$ used three different simple ANNs to track the robot's position. The input to each of the neural networks consisted of the two motor speeds before receiving the command, the two motor speeds from the current command, and the length of time for the current command. The purpose of using the previous motor command was to account for positive and negative acceleration the robot underwent going from one command to the next; the neural network would have to incorporate that change in order to make an accurate account of it's orientation. The output of the ANNs was either the robot's x-coordinate, y-coordinate, or angle. 
+  Pretorius $et$ $al.$ used three different simple ANNs to track the robot's position. The input to each of the neural networks consisted of the two motor speeds before receiving the command, the two motor speeds from the current command, and the length of time for the current command. The purpose of using the previous motor command was to account for positive and negative acceleration the robot underwent going from one command to the next; the neural network would have to incorporate that change in order to make an accurate account of it's orientation. The output of the ANNs was either the robot's x-coordinate, y-coordinate, or angle. Figure \ref{fig:ANN} is a visual representation of the ANNs.
   
+\begin{figure}%[H]
+  \includegraphics[scale=1]{cr2}
+\caption{The ANN for the position tracking controller}
+\label{fig:ANN}
+\end{figure}
+
   The ANNs were then evolved using a GA. The GA parameters included a 80\% crossover probability and a 5\% mutation possibility. The population size was 250 candidates, which were evolved for 15,000 generations. This took approximately 12 hours for each of the three ANNs. The fitness function was the Mean Squared Error (MSE), which measured the accuracy of a given candidate ANN configuration. The MSE is defined as:
   
   \[
@@ -245,29 +273,41 @@ Where $N_{max}$ is the absolute number of rectangles traversed while not enterin
   Evolved code may be confusing or difficult to alter. By observing evolved behaviors, it is possible to learn the general solution and then create code to mimic that solution. This is not a necessary step, but it can provide some insight as to what the evolved candidate is doing to be successful.
 
 \subsection{Station Keeping Robot}\label{Moore behavior}
-  The evolutionary solutions for the station keeping robot in ~\cite{Moore:2013:ESK:2463372.2463402} were both unforeseen and effective. Depending on the trial, the evolved candidates would range from standard locomotion to complex maneuvers. When the flow was coming from either the front or at a 45$^\circ$ angle to the front left, the simulated robot would swim forward or swim forward while listing to the left. Because of the design of the robot, it is somewhat difficult for it to turn and not move too far away from the starting point. This would make station keeping especially difficult when the flow was coming from the back or side, the robot would drift away as it would turn, resulting in a poor fitness. so instead, when the flow was coming from directly behind the robot, it used a complex maneuver to flip tail-over-head to face the flow and then propelled itself forward to maintain its position (http://y2u.be/UufbnEGFwV4). This works well because the robot floats, and the flipping movement doesn't cause a change in it's height in the water. The most challenging trial was when the flow came at a 90$^\circ$ angle; because reorienting to such an angle was evidently a major challenge, the evolved behavior incorporated a flipping motion combined with a rolling the body to avoid turning.
+  The evolutionary solutions for the station keeping robot in ~\cite{Moore:2013:ESK:2463372.2463402} were both unforeseen and effective. Depending on the trial, the evolved candidates would range from standard locomotion to complex maneuvers. When the flow was coming from either the front or at a 45$^\circ$ angle to the front left, the simulated robot would swim forward or swim forward while listing to the left. Because of the design of the robot, it is somewhat difficult for it to turn and not move too far away from the starting point. This would make station keeping especially difficult when the flow was coming from the back or side, the robot would drift away as it would turn, resulting in a poor fitness. so instead, when the flow was coming from directly behind the robot, it used a complex maneuver to flip tail-over-head to face the flow and then propelled itself forward to maintain its position (http://y2u.be/UufbnEGFwV4). Figure \ref{fig:robot flip} shows the behavior. This works well because the robot floats, and the flipping movement doesn't cause a change in it's height in the water. The most challenging trial was when the flow came at a 90$^\circ$ angle; because reorienting to such an angle was evidently a major challenge, the evolved behavior incorporated a flipping motion combined with a rolling the body to avoid turning.
  
-  Moore $et$ $al.$ ~\cite{Moore:2013:ESK:2463372.2463402} compared early candidates with final candidates to contrast in evolved behaviors. When the flow was coming from behind, an early candidate selected from the 25\textsuperscript{th} generation was pushed by the current straight out of the `rewards zone' (the desired station keeping location). It didn't actually start swimming until 60 seconds into the trail, and was unable to make any progress in the allotted time. In contrast, the final candidate immediately reacts and is able to orient (flip) itself and gain against the flow into the `rewards zone'.
+\begin{figure}%[H]
+
+\caption{Images from the simulation which showed the evolved behavior when the flow was behind the robot}
+
+  \includegraphics[scale=1]{sr1}
+\label{fig:robot flip}
+\end{figure}
+
+  Moore $et$ $al.$ ~\cite{Moore:2013:ESK:2463372.2463402} compared early candidates with final candidates to contrast in evolved behaviors. When the flow was coming from behind, an early candidate selected from the 25\textsuperscript{th} generation was pushed by the current straight out of the `rewards zone' (the desired station keeping location). It didn't actually start swimming until 60 seconds into the trail, and was unable to make any progress in the allotted time. In contrast, the final candidate immediately reacts and is able to orient (flip) itself and gain against the flow into the `rewards zone'. 
+% Figure \ref{rewardsZone} compares the final and an earily candidate and their ability to maintain position over time.
+
   
   Moore $et$ $al.$ ~\cite{Moore:2013:ESK:2463372.2463402} noted that one of the most impacting changes was to allow a setup phase. Allowing the setup phase allowed the candidate to have a poor initial fitness as long as it was able to attain a good fitness later. This was a valuable choice because time was superfluous, and it relieved pressure to perform well immediately. This case demonstrates the power of the fitness function; the function guides the simulation and results will directly correlate to what the function is optimizing. 
   
+
+
   \subsection{Walking Humanoid Robot}\label{Farchy behavior}
   
 	The results of the ER for the walking robot  ~\cite{Farchy:2013:HRL:2484920.2484930} had improved the walking speed, and the improvement was statistically significant. Before evolution, the walking speed of the robot was 11.9 cm/s. After the first iteration of evolution the maximum walking speed increased to 13.2 cm/s, however the robot was not as stable as the original. The next iteration used the same parameters as the first (increasing the leg swing) and the walking speed had increased to 14.6 cm/s. The following GSL focused more on stabilizing the robot, and a parameter set was found such that the robot was able to move at 15.9 cm/s and not fall down at all. Initially the maximum length of the robot's step was reduced by 1/3 because the parameters the robot used were unstable in the real tests but worked fine in simulation. It was found that by the forth iteration this was no longer an issue, and the step size was restored to its maximum. At the maximum step size, the original velocity of 11.9 cm/s increased to 13.5 cm/s, and the final candidate robot was able to move at 17.1 cm/s, a 26.7\% increase.
 	
 	\subsection{Position Tracking Robot}\label{Pretorius behavior}
 	
-	The  position tracking robot's three ANN had evolved to be competent at tracking the robots coordinates and angle. The top x-coordinate, y-coordinate, and angle ANNs were tested with 50 commands to test their accuracy, the results are located in <FIGURE >. To validate the experiment, Pretorius $et$ $al.$ tested the navigation controller evolved with the ANNs. \ref{fig:position tracking grid} shows the results of the navigational test controller, which used 13 commands to navigate around the grid. Pretorius $et$ $al.$ were satisfied with the results, noting that they were able to accomplish the specified task without any manual robotic programming. The simulated and actual paths were reasonably close to one another, meaning that the ANNs were able to achieve a relatively accurate account of the position and orientation of the robot. The error between the actual and simulated run was expected because slight errors tended to compound, i.e. after each command the simulator would be slightly inaccurate plus the sum of the previous command's inaccuracies. 
+	The  position tracking robot's ~\cite{Pretorius:2009:TAN:1632149.1632171} three ANN had evolved to be competent at tracking the robots coordinates and angle. The top x-coordinate, y-coordinate, and angle ANNs were tested with 50 commands to test their accuracy, the results are located in <FIGURE >. To validate the experiment, Pretorius $et$ $al.$ tested the navigation controller evolved with the ANNs. \ref{fig:position tracking grid} shows the results of the navigational test controller, which used 13 commands to navigate around the grid. Pretorius $et$ $al.$ were satisfied with the results, noting that they were able to accomplish the specified task without any manual robotic programming. The simulated and actual paths were reasonably close to one another, meaning that the ANNs were able to achieve a relatively accurate account of the position and orientation of the robot. The error between the actual and simulated run was expected because slight errors tended to compound, i.e. after each command the simulator would be slightly inaccurate plus the sum of the previous command's inaccuracies. 
 	
-\begin{figure}[H]
+\begin{figure}%[H]
 
-\caption{Quality vs. Searcher for up to six tweaks, one parent, two children}
-\centering
+\caption{Predicted and actual robot paths from the navigation controller, which used 13 commands}
+
   \includegraphics[scale=1]{cr3}
 \label{fig:position tracking grid}
 \end{figure}
 	  
-\section{Conclusions}
+\section{Conclusions}\label{conclusion}
 
  These research cases each demonstrate successful applications of ER. We can draw the conclusion that not only is evolutionary robotics feasible, it can in fact quite effective. Simulation provided an important platform upon which evolution could take place. That platform can be a physical representation of the robot and the environment, or by a sizable testbed as seen in the robot developed by Pretorius $et$ $al.$~\cite{Pretorius:2009:TAN:1632149.1632171}. Each research case used evolutionary computation to evolve neural network controllers, most likely because neural networks have been shown to be an effective tool for developing relationships from sensors and motors.
 
