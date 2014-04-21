@@ -6,6 +6,8 @@
   \setbeamercovered{transparent}
 }
 
+\usepackage{color}
+\usepackage[ampersand]{easylist}
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
 \usepackage{times}
@@ -65,19 +67,20 @@
   \titlepage
 \end{frame}
 
-\section*{Overview}
+\section{Overview}
 \subsection*{The big picture}
 \begin{frame}
   \frametitle{The big picture}
-  
+
   \begin{columns}
   \begin{column}{0.6\textwidth}
   \begin{itemize}
-  	\item Developmental plasticity: a powerful source of flexibility in biology
-	\item Most EC \& GP systems don't have a developmental phase
-	\item Even fewer allow for plasticity during development
-	\item N-gram GP has natural developmental phase
-	\item Can we add plasticity?
+    \item Robots are faced with difficult problems
+        \item Evolutionary computation is a process which can can solve difficul
+t problems in programming
+        \item Since a robot interacts with the physical world, EC is slower by s
+everal magnitudes
+        \item It is possible to use EC to evolve robots
   \end{itemize}
   \end{column}
   \begin{column}{0.4\textwidth}
@@ -86,6 +89,214 @@
     \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
   \end{column}
   \end{columns}
+\end{frame}
+
+%\subsection{Intro2}
+%\begin{frame}
+ % \frametitle{Introduce solving cases}
+%\end{frame}
+
+\section{Background}
+
+\subsection{EC}
+\begin{frame}
+  \frametitle{Evolutionary Computation}
+ \begin{itemize}
+  \item Evolutionary Computation (EC) is a problem solving technique which mimics natural selection
+ 
+   \end{itemize}
+\end{frame}
+	
+\begin{frame}
+\frametitle{Evolutionary Computation: Requirements}
+\begin{itemize}
+  \item A population of candidates
+  \item A fitness function
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Evolutionary Computation: Process}
+ \begin{itemize}
+  \item Candidates are evaluated
+  \item The best performing candidates are selected
+ \begin{itemize}
+  \item Two candidates cross-over with one another
+    \item Some candidates are subject to mutation
+\end{itemize}
+  \item This process repeats until the population is recreated
+\end{itemize}
+\end{frame}
+
+\subsection{GA}
+\begin{frame}
+  \frametitle{Genetic Algorithm}
+\begin{itemize}
+  \item Genetic Algorithms are a type of EC
+  \item Candidates are represented as bit strings
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+
+  \frametitle{Genetic Algorithm: Cross-over}
+\begin{itemize}
+  \item A Cross-over point is selected from two candidates. All bits are swapped beyond the point, creating two new candidates.
+\end{itemize}
+  \begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+  \item Before:
+\end{itemize}
+\[
+C_1=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},|  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
+\]
+\[C_2=[  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1},| \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
+\]
+\end{column}
+ \begin{column}{0.5\textwidth}
+\begin{itemize}
+  \item After:
+\end{itemize}
+   \[
+[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
+\]
+\[ [  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
+\]
+  \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Genetic Algorithm: Candidate Manipulation}
+\begin{itemize}
+  \item Mutation:
+\end{itemize}
+\[
+[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{1} ]
+\]
+\[[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{orange}{0}, \textcolor{red}{1} ]
+\]
+\end{frame}
+
+\subsection{OneMax}
+\begin{frame}
+  \frametitle{Example: ``One Max''}
+\[
+p \left\{\begin{matrix}
+[  1,~0,~1,~1,~ 0,~1,~0,~1,~\cdots~1] \\ %inkscape, omnigraphle, googledocs? (need pdf vector graphic)
+[  1 ,~0,~1,~0,~ 1,~1,~1,~0,~ \cdots ~0] \\
+\cdots\\
+[  0 ,~0,~1,~1,~ 0,~1,~0,~0,~ \cdots ~0] 
+\end{matrix}\right.
+\]
+\end{frame}
+
+\subsection{ANN}
+\begin{frame}
+  \frametitle{Artificial Neural Networks}
+\end{frame}
+
+\section{Research Cases}
+
+\subsection{SwimmingRobot}
+\begin{frame}
+  \frametitle{Swimming Robot}
+\end{frame}
+
+\subsection{WalkingRobot}
+\begin{frame}
+  \frametitle{Walking Robot}
+\end{frame}
+
+\subsection{CoordRobot}
+\begin{frame}
+  \frametitle{Coordinate Tracking Robot}
+\end{frame}
+
+\section{Simulation}
+
+\subsection{SimSwimmingRobot}
+\begin{frame}
+  \frametitle{Swimming Robot: Simulation}
+\end{frame}
+
+\subsection{SimWalkingRobot}
+\begin{frame}
+  \frametitle{Walking Robot: Simulation}
+\end{frame}
+
+\subsection{SimCoordRobot}
+\begin{frame}
+  \frametitle{Coordinate Tracking Robot: Simulation}
+\end{frame}
+
+\subsection{SimCoordRobot}
+\begin{frame}
+  \frametitle{Coordinate Tracking Robot}
+\end{frame}
+
+\section{EvolutionaryProcess}
+
+\subsection{EPSwimmingRobot}
+\begin{frame}
+  \frametitle{Swimming Robot: Evolutionary Process}
+%Trials (45 sec)
+%Neural Network (45 sec)
+%Fitness function (45 sec)
+%Tweaks to fitness function (1 min)
+\end{frame}
+
+\subsection{EPWalkingRobot: Evolutionary Process}
+\begin{frame}
+  \frametitle{Walking Robot: Simulation}
+%Fitness function (1 min)
+%GSL (2 min)
+\end{frame}
+
+\subsection{EPCoordRobot: Evolutionary Process}
+\begin{frame}
+  \frametitle{Coordinate Tracking Robot: Simulation}
+%Explain commands (45 sec)
+%Neural Network (45 sec)
+%Fitness function (1 min)
+%Explain nav controller (1:30 min)
+\end{frame}
+
+\section{Results}
+\subsubsection{Station Keeping Robot} %http://y2u.be/UufbnEGFwV4
+\begin{frame}
+  \frametitle{Station Keeping Robot: Results}
+  \begin{center}
+
+
+  \includegraphics[width=0.75\textwidth]{Illustrations/sr1.pdf}
+       \\
+    \only{\tiny{Moore et al. }}
+    \end{center}
+  \begin{itemize}
+    \item Each trial had a candidate which successfully maintained the position
+        \item When the flow was coming from behind, the evolved candidate would flip end-over-head to orient itself (http://y2u.be/UufbnEGFwV4)
+  \end{itemize}
+\end{frame}
+
+\subsection{ResultsWalkingRobot}
+\begin{frame}
+  \frametitle{Results Robot: Results}
+\end{frame}
+
+\subsection{ResultsCoordRobot}
+\begin{frame}
+  \frametitle{Coordinate Tracking Robot: Results}
+\end{frame}
+
+\section{Questions and Acknowledgements}
+\subsection{}
+\begin{frame}
+  \frametitle{}
+  Any Questions?
+
+Thank you to Nic McPhee, Elena Machkasova, and Alex Jarvis
 \end{frame}
 
 \end{document}
