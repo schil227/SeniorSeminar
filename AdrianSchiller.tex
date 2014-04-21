@@ -135,9 +135,9 @@ Adrian T. Schiller \\
  
  However, EC requires intensive computation for hours at a time, generating, modifying, and evaluating many candidates. This becomes impractical for a physical robot because it would require the overhead of uploading the code, setting up the robot and its environment to be identical every time it is tested, and doing each of these tasks thousands of times. EC for robotics is especially challenging because it is done in real time, as opposed to traditional EC which can evaluate many candidates relatively quickly on a computer. Because of the precision and time required, it is unclear how to make EC effective in robotics.
  
- Yet means do exist to apply evolution to robotics, an area known as Evolutionary Robotics (ER). This paper will analyze three different research cases involving ER. Each case has a robot tasked with solving a particular problem; maintaining a position on a body of water, increasing walking speed, and tracking their coordinates without sensory input. By analyzing the papers, it was found that EC can be applied to robots by using a simulation, and the outcome have shown that ER is effective.
+ Yet means do exist to apply evolution to robotics, an area known as Evolutionary Robotics (ER). This paper will analyze three different research cases involving ER. Each case has a robot tasked with solving a particular problem; maintaining a position on a body of water, increasing walking speed, and tracking their coordinates without sensory input. By analyzing the research cases, it was found that EC can be applied to robots by using a simulation, and the outcome have shown that ER is effective.
 
-   Section \ref{background}  has  background information on evolutionary computation, neural networks, and the research cases this paper uses. Section \ref{simulation} covers robotic simulation and how it is used in these research cases, Section \ref{evolution} gives the details about the evolutionary robotics for each of the research cases, and Section \ref{behavior} discusses behaviors the evolved robots developed. Section \ref{conclusion} presents the conclusion of this paper.
+   Section \ref{background}  has  background information on evolutionary computation, neural networks, and the research cases this paper uses. Section \ref{simulation} covers robotic simulation and how it is used in these research cases, Section \ref{evolution} gives the details about the evolutionary robotics for each of the research cases, and Section \ref{behavior} discusses results and behaviors the evolved robots developed. Section \ref{conclusion} presents the conclusion of this paper.
  
  
 %\section{The {\secit Body} of The Paper}\label{main}
@@ -190,7 +190,9 @@ Genetic Algorithms~(GA)~\cite{wiki:GeneticAlgorithms}, a type of EC, represents 
 	The final study, by Pretorius $et$ $al.$~\cite{Pretorius:2009:TAN:1632149.1632171}, created a Lego Mindstorm robot which would track its own position and heading from an evolved controller, without using any external sensors. This controller would be able to calculate where the robot is located as it moves, only using the motor's speed, direction, and running time. The robot (Figure \ref{fig:pRobot}) consists of two motorized wheels and has two blue and purple tracking markers on the top, as well as a light sensor. The markers and light sensor were used by an overhead camera to collect position and orientation information, and pair it with commands given to the robot. This data was used as a testbed to train the controller. This is a difficult problem because without sensory input, tracking a position must be done using internal functions, which tend to be complex because of various accelerations the robot undergoes when moving, and inaccurate due to friction and imprecise movement (slippage, low battery, etc.). ER was chosen to create a correlation between motor movement and location/orientation. 
 
 \begin{figure}%[H]
+\begin{center}
   \includegraphics[scale=.65]{cr1}
+\end{center}
 \caption{The position tracking robot. Taken from ~\cite{Pretorius:2009:TAN:1632149.1632171}}
 \label{fig:pRobot}
 \end{figure}
@@ -236,9 +238,7 @@ where
  The robot was evaluated in two separate trials. The first trial, {\tt goToTarget}, gave the simulated robot several locations to walk to, dealing with several changes in direction. The fitness of {\tt goToTarget} is:
 \[
   \textrm{fitness} = (\sum_{t} (\textrm{DistanceTraveled}_t)) - \textrm{fallingPenalty}
-\] 
-
- where {\tt DistanceTraveled} is the the length to each destination. All of the {\tt DistanceTraveled} values are summed until the trial ends or the robot falls down. {\tt FallingPenalty} is a penalty administered to the fitness should the robot fall before completing the trial. The other trial is {\tt WalkFront}, which evaluates the velocity of the robot walking forward for 15 seconds. The robots fitness for {\tt WalkFront} is the maximum velocity it achieves. Together, these two trials evaluate how quickly a robot can move and how stable it is, evolving a both fast and stable robot.
+\]where {\tt DistanceTraveled} is the the length to each destination. All of the {\tt DistanceTraveled} values are summed until the trial ends or the robot falls down. {\tt FallingPenalty} is a penalty administered to the fitness should the robot fall before completing the trial. The other trial is {\tt WalkFront}, which evaluates the velocity of the robot walking forward for 15 seconds. The robots fitness for {\tt WalkFront} is the maximum velocity it achieves. Together, these two trials evaluate how quickly a robot can move and how stable it is, evolving a both fast and stable robot.
   
  % Farchy $et$ $al.$ used an algorithm slightly different from GA called Co-variance Matrix Adaptation Evolution Strategy (CMA-ES). The main difference between the two is CMA-ES tracks a co-variance matrix of parameters which perform well, thereby drawing a correlation between well performing candidates and their parameters. Instead of sorting solely by fitness like GA, it sorts by these parameters and repopulates the next generation by the upper mean of the previous generation.
   
@@ -296,7 +296,7 @@ where $N_{max}$ is the absolute number of rectangles traversed while not enterin
 \center
 \caption{The accuracies of the evolved coordinate tracking ANN. Taken from ~\cite{Pretorius:2009:TAN:1632149.1632171}}
 
-  \includegraphics[scale=.9]{cr4}
+  \includegraphics[scale=1]{cr4}
 \label{fig:ANNtable}
 \end{figure}
 	The  position tracking robot's ~\cite{Pretorius:2009:TAN:1632149.1632171} three ANN had evolved to be competent at tracking the robots coordinate and angle. The top x-coordinate, y-coordinate, and angle ANNs were tested with 50 commands determine their accuracy, the results are located in Figure \ref{fig:ANNtable}. To validate the experiment, Pretorius $et$ $al.$ tested the navigation controller evolved with the ANNs. Figure \ref{fig:position tracking grid} shows the results of the navigational test controller, which used 13 commands to navigate around the grid. Pretorius $et$ $al.$ were satisfied with the results, noting that they were able to accomplish the specified task without  manually programming the robot. The simulated and actual paths were reasonably close to one another, meaning that the ANNs were able to achieve a relatively accurate account of the position and orientation of the robot. The error between the actual and simulated run was expected because slight errors tended to compound, i.e. after each command the simulator would be slightly inaccurate plus the sum of the previous command's inaccuracies. 
