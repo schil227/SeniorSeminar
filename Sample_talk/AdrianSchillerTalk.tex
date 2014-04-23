@@ -98,7 +98,7 @@ everal magnitudes
 
 \section{Background}
 
-\subsection{EC}
+\subsection{Evolutionary Computation}
 \begin{frame}
   \frametitle{Evolutionary Computation}
  \begin{itemize}
@@ -128,7 +128,7 @@ everal magnitudes
 \end{itemize}
 \end{frame}
 
-\subsection{GA}
+\subsection{Genetic Algorithm}
 \begin{frame}
   \frametitle{Genetic Algorithm}
 \begin{itemize}
@@ -149,9 +149,9 @@ everal magnitudes
   \item Before:
 \end{itemize}
 \[
-C_1=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},|  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
+C_i=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},|  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
 \]
-\[C_2=[  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1},| \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
+\[C_j=[  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1},| \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
 \]
 \end{column}
  \begin{column}{0.5\textwidth}
@@ -175,26 +175,109 @@ C_1=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{r
 \[
 [ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{1} ]
 \]
-\[[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{orange}{0}, \textcolor{red}{1} ]
+\[[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{red}{1} ]
 \]
 \end{frame}
 
-\subsection{OneMax}
+\subsection{``One Max'' Example}
 \begin{frame}
   \frametitle{Example: ``One Max''}
+\begin{itemize}
+\item Goal: Evolve an array consisting of the most ones from 20 candidate arrays with 10 bits
+\end{itemize}
 \[
-p \left\{\begin{matrix}
-[  1,~0,~1,~1,~ 0,~1,~0,~1,~\cdots~1] \\ %inkscape, omnigraphle, googledocs? (need pdf vector graphic)
-[  1 ,~0,~1,~0,~ 1,~1,~1,~0,~ \cdots ~0] \\
+20 \left\{\begin{matrix}
+[  1,~1,~1,~0,~ 0,~0,~1,~0,~0,~1] \\ %inkscape, omnigraphle, googledocs? (need pdf vector graphic)
+[  0,~0,~1,~1,~ 0,~1,~1,~0,~1,~0] \\
 \cdots\\
-[  0 ,~0,~1,~1,~ 0,~1,~0,~0,~ \cdots ~0] 
+[  1 ,~0,~1,~0,~ 1,~1,~1,~0,~0,~0] 
 \end{matrix}\right.
 \]
 \end{frame}
 
-\subsection{ANN}
+\begin{frame}
+  \frametitle{Example: ``One Max''}
+\begin{itemize}
+\item The fitness function $F()$ is used to calculate the fitness of each candidate
+\item In this case, the function counts the number of ones in the array
+\end{itemize}
+
+\[F([   \textcolor{red}{1},~\textcolor{red}{1},~ \textcolor{red}{1},~0,~ 0,~0,~\textcolor{red}{1},~ 0,~ 0,~ \textcolor{red}{1}]  ) = 6 \]%inkscape, omnigraphle, googledocs? (need pdf vector graphic)
+\[F([  0 ,~0,~ \textcolor{red}{1},~ \textcolor{red}{1},~ 0,~ \textcolor{red}{1},~0,~0,~ \textcolor{red}{1},~0]) = 4\]
+\[\cdots\]
+\[F([   \textcolor{red}{1},~0,~ \textcolor{red}{1},~0,~  \textcolor{red}{1},~ \textcolor{red}{1},~ \textcolor{red}{1},~0,~0,~0]) = 5\]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example: ``One Max''}
+\begin{itemize}
+\item The top 10 candidates are selected to create a new population
+\item Top candidates are randomly selected to cross-over with one another
+\end{itemize}
+
+  \begin{columns}
+  \begin{column}{0.5\textwidth}
+
+\[
+C_1=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0},|  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
+\]
+\[C_2=[  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1},| \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
+\]
+\end{column}
+ \begin{column}{0.5\textwidth}
+
+   \[
+C_x=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
+\]
+\[C_y = [  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
+\]
+  \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example: ``One Max''}
+\begin{itemize}
+  \item Some created candidates may undergo mutation:
+\end{itemize}
+\[
+C_x=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0} ]
+\]
+\[C_x'=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{blue}{1}, \textcolor{red}{1}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0} ]
+\]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Example: ``One Max''}
+\begin{itemize}
+  \item Once the population is recreated, the process repeats until eventually a limit is reached
+  \item In this case, the limit would be time or finding an array of all 1's
+\end{itemize}
+\[
+F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{red}{1}, \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{red}{1}, 0 ]) = 7
+\]
+\[F([  0, 0, \textcolor{red}{1}, \textcolor{red}{1}, 0,  0, \textcolor{red}{1}, 0, 0, \textcolor{red}{1} ]) = 4
+\]
+\[\cdots\]
+\[F([  \textcolor{red}{1}, 0, \textcolor{red}{1}, \textcolor{red}{1}, 0,  \textcolor{red}{1}, 0, 0, \textcolor{red}{1}, \textcolor{red}{1} ]) = 6
+\]
+\end{frame}
+
+\subsection{Artificial Neural Networks}
 \begin{frame}
   \frametitle{Artificial Neural Networks}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Artificial neural networks are a collection of nodes with weighted vertices.
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/cr2.pdf}
+       \\
+    \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
+\end{column}
+\end{columns}
 \end{frame}
 
 \section{Research Cases}
