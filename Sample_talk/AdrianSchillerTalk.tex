@@ -203,7 +203,7 @@ C_i=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{r
 \end{itemize}
 
 \[F([   \textcolor{red}{1},~\textcolor{red}{1},~ \textcolor{red}{1},~0,~ 0,~0,~\textcolor{red}{1},~ 0,~ 0,~ \textcolor{red}{1}]  ) = 6 \]%inkscape, omnigraphle, googledocs? (need pdf vector graphic)
-\[F([  0 ,~0,~ \textcolor{red}{1},~ \textcolor{red}{1},~ 0,~ \textcolor{red}{1},~0,~0,~ \textcolor{red}{1},~0]) = 4\]
+\[F([  0 ,~0,~ \textcolor{red}{1},~ \textcolor{red}{1},~ 0,~ \textcolor{red}{1},~ \textcolor{red}{1},~0,~ \textcolor{red}{1},~0]) = 4\]
 \[\cdots\]
 \[F([   \textcolor{red}{1},~0,~ \textcolor{red}{1},~0,~  \textcolor{red}{1},~ \textcolor{red}{1},~ \textcolor{red}{1},~0,~0,~0]) = 5\]
 \end{frame}
@@ -270,7 +270,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
   \begin{column}{0.5\textwidth}
 \begin{itemize}
 \item  ANNs are a collection of nodes with weighted vertices.
-\item 
+\item The purpose of the network is to develop a functional relationship from the input to the output
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -292,7 +292,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
     \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
 \end{center}
 \begin{itemize}
-\item \large The station keeping robot was developed by Moore $et~al.$ 
+\item \large Moore $et~al.$ developed the station keeping robot was 
 \item \large Goal: to maintain position in a body of water
 \end{itemize}
 \end{frame}
@@ -307,7 +307,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 
 \end{frame}
 
-\subsection{WalkingRobot}
+\subsection{Walking Robot}
 \begin{frame}
   \frametitle{Walking Robot}
 
@@ -326,7 +326,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \end{columns}
 \end{frame}
 
-\subsection{CoordRobot}
+\subsection{Coordinate Tracking Robot}
 \begin{frame}
   \frametitle{Coordinate Tracking Robot}
 \begin{columns}
@@ -346,56 +346,113 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 
 \section{Simulation}
 
+\subsection{}
+\begin{frame}
+\frametitle{Simulation}
+\begin{itemize}
+\item Defined as representing the characteristics or behaviors of one system through the use of another
+\item Error caused from inaccuracies of simulation is known as Transitivity 
+\end{itemize}
+\end{frame}
+
 \subsection{Station Keeping Robot: Simulation}
 \begin{frame}
   \frametitle{Station Keeping Robot: Simulation}
-\begin{center}
- \includegraphics[width=0.7\textwidth]{Illustrations/sr6.pdf}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item  Used ODE to replicate environment and robot
+\item  No fluid dynamics
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/sr6.pdf}
        \\
     \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
-\end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
-\subsection{SimWalkingRobot}
+\subsection{Walking Robot: Simulation}
 \begin{frame}
   \frametitle{Walking Robot: Simulation}
-\begin{center}
- \includegraphics[width=0.7\textwidth]{Illustrations/wr2.pdf}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item  Uses SimSpark (also ODE)
+\item  Not a perfect representation
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/wr2.pdf}
        \\
     \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
-\end{center}
+\end{column}
+\end{columns}
 \end{frame}
 
-\subsection{SimCoordRobot}
+\subsection{Coordinate Tracking Robot: Simulation}
 \begin{frame}
   \frametitle{Coordinate Tracking Robot: Simulation}
-
-\end{frame}
-
-\subsection{SimCoordRobot}
-\begin{frame}
-  \frametitle{Coordinate Tracking Robot}
+\begin{itemize}
+\item An overhead camera captured heading/orientation of robot from arbitrary motor commands
+\item A testbed of 5000 commands were sent to the robot and captured by the camera, creating map of command and position
+\end{itemize}
 \end{frame}
 
 \section{EvolutionaryProcess}
 
 \subsection{Station Keeping Robot: Evolutionary Process}
 \begin{frame}
-  \frametitle{Swimming Robot: Evolutionary Process}
-%Trials (45 sec)
+  \frametitle{Station Keeping Robot: Neural Network}
+\begin{itemize}
+\item Input: 
+\begin{itemize}
+\item Current 3D coordinates, $(x,y,z)$
+\item The difference between current and desired coordinate  $(x,y,z)$
+\item The output of the previous output (servo speeds and oscillations)
+\end{itemize}
+\item Output:
+\begin{itemize}
+\item oscillation of the rear fin
+\item speed of the left flipper
+\item speed of the right flipper
+\end{itemize}
+\end{itemize}
 %Neural Network (45 sec)
 %Fitness function (45 sec)
 %Tweaks to fitness function (1 min)
 \end{frame}
 
-\subsection{EPWalkingRobot: Evolutionary Process}
+\begin{frame}
+  \frametitle{Station Keeping Robot: Fitness Function}
+\begin{equation*}
+	\textrm{fitness} = \sum_{t} (10 - d_t(x, y, z))
+\end{equation*}
+~~~~~~~~~~~  where
+\[
+	d_t(x, y, z) = 
+		\begin{cases} 10, & \textrm{if distance}_t(x, y, z) > 10 \\
+					  \textrm{distance}_t(x, y, z), & \textrm{ otherwise}
+		\end{cases}
+\]
+\end{frame}
+
+\begin{frame}
+  \frametitle{Station Keeping Robot: Fitness Function}
+\begin{itemize}
+\item After a 60 second setup phase, fitness was evaluated every 250ms for 60 seconds
+\end{itemize}
+\end{frame}
+
+\subsection{Walking Robot: Evolutionary Process}
 \begin{frame}
   \frametitle{Walking Robot: Simulation}
 %Fitness function (1 min)
 %GSL (2 min)
 \end{frame}
 
-\subsection{EPCoordRobot: Evolutionary Process}
+\subsection{Coordinate Tracking Robot: Evolutionary Process}
 \begin{frame}
   \frametitle{Coordinate Tracking Robot: Simulation}
 %Explain commands (45 sec)
