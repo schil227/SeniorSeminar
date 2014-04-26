@@ -137,47 +137,50 @@ everal magnitudes
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+%\begin{comment}
+%\begin{frame}
+%
+%  \frametitle{Genetic Algorithm: Cross-over}
+%\begin{itemize}
+%  \item A Cross-over point is selected from two candidates. All bits are swapped beyond the point, creating two new candidates.
+%\end{itemize}
+%  \begin{columns}
+%  \begin{column}{0.5\textwidth}
+%\begin{itemize}
+%  \item Before:
+%\end{itemize}
+%\[
+%C_i=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},|  \textcolor{red}{0},  \textcolor{red}{0}, %\textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
+%\]
+%\[C_j=[  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1},| \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
+%\]
+%\end{column}
+% \begin{column}{0.5\textwidth}
+%\begin{itemize}
+%  \item After:
+%\end{itemize}
+%   \[
+%[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, %\textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
+%\]
+%\[ [  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{red}{0},  \textcolor{red}{0}, %\textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
+%\]
+%  \end{column}
+%  \end{columns}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Genetic Algorithm: Candidate Manipulation}
+%%\begin{itemize}
+%  \item Mutation:
+%\end{itemize}
+%\[
+%[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, %\textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{1} ]
+%\]
+%\[[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, %\textcolor{red}{1}, \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{red}{1} ]
+%\]
+%\end{frame}
+%\end{comment}
 
-  \frametitle{Genetic Algorithm: Cross-over}
-\begin{itemize}
-  \item A Cross-over point is selected from two candidates. All bits are swapped beyond the point, creating two new candidates.
-\end{itemize}
-  \begin{columns}
-  \begin{column}{0.5\textwidth}
-\begin{itemize}
-  \item Before:
-\end{itemize}
-\[
-C_i=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},|  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
-\]
-\[C_j=[  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1},| \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
-\]
-\end{column}
- \begin{column}{0.5\textwidth}
-\begin{itemize}
-  \item After:
-\end{itemize}
-   \[
-[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
-\]
-\[ [  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
-\]
-  \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Genetic Algorithm: Candidate Manipulation}
-\begin{itemize}
-  \item Mutation:
-\end{itemize}
-\[
-[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{1} ]
-\]
-\[[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{red}{0},  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{red}{1} ]
-\]
-\end{frame}
 
 \subsection{``One Max'' Example}
 \begin{frame}
@@ -196,7 +199,7 @@ C_i=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{r
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example: ``One Max''}
+  \frametitle{Fitness Evaluation}
 \begin{itemize}
 \item The fitness function $F()$ is used to calculate the fitness of each candidate
 \item In this case, the function counts the number of ones in the array
@@ -209,7 +212,7 @@ C_i=[ \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{1},  \textcolor{r
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example: ``One Max''}
+  \frametitle{Cross-Over'}
 \begin{itemize}
 \item The top 10 candidates are selected to create a new population
 \item Top candidates are randomly selected to cross-over with one another
@@ -236,7 +239,7 @@ C_x=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{r
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example: ``One Max''}
+  \frametitle{Mutation}
 \begin{itemize}
   \item Some created candidates may undergo mutation:
 \end{itemize}
@@ -248,10 +251,10 @@ C_x=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{r
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example: ``One Max''}
+  \frametitle{Repeat}
 \begin{itemize}
   \item Once the population is recreated, the process repeats until eventually a limit is reached
-  \item In this case, the limit would be time or finding an array of all 1's
+  \item In this case, the limit would be iterations, time, or finding an array of all 1's
 \end{itemize}
 \[
 F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{red}{1}, \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{red}{1}, 0 ]) = 7
@@ -404,6 +407,16 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 
 \subsection{Station Keeping Robot: Evolutionary Process}
 \begin{frame}
+  \frametitle{Station Keeping Robot}
+\begin{itemize}
+\item Evolved a separate candidate for each of the trials
+\item Population size of 100 candidates
+\item Evolved for 2000 generations
+\item The entire process was repeated 25 times for each of the four trials
+\end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{Station Keeping Robot: Neural Network}
 \begin{itemize}
 \item Input: 
@@ -436,30 +449,147 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 					  \textrm{distance}_t(x, y, z), & \textrm{ otherwise}
 		\end{cases}
 \]
-\end{frame}
-
-\begin{frame}
-  \frametitle{Station Keeping Robot: Fitness Function}
 \begin{itemize}
 \item After a 60 second setup phase, fitness was evaluated every 250ms for 60 seconds
 \end{itemize}
 \end{frame}
 
+%\begin{frame}
+  %\frametitle{Station Keeping Robot: Fitness Function}
+%\begin{itemize}
+%\item After a 60 second setup phase, fitness was evaluated every 250ms for 60 seconds
+%\end{itemize}
+%\end{frame}
+
+%\subsection{Walking Robot: Evolutionary Process}
+%\begin{frame}
+%  \frametitle{Walking Robot}
+%\begin{itemize}
+%\item Farchy $et al.$ wanted to optimize several parameters to increase speed
+%\end{itemize}
+%\end{frame}
+
 \subsection{Walking Robot: Evolutionary Process}
 \begin{frame}
-  \frametitle{Walking Robot: Simulation}
+  \frametitle{Walking Robot: Parameter optimization}
+\begin{itemize}
+\item Farchy $et al.$ wanted to optimize several parameters to increase speed
+\end{itemize}
+\begin{center}
+ \includegraphics[scale=1]{Illustrations/wr5.pdf}
+       \\
+    \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
+\end{center}
 %Fitness function (1 min)
 %GSL (2 min)
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Walking Robot: Fitness Functions}
+\begin{itemize}
+\item Used two fitness functions
+\begin{itemize}
+\item $goToPosition$
+
+\[
+  \textrm{fitness}\_g = (\sum_{t} (\textrm{DistanceTraveled}_t)) - \textrm{fallingPenalty}
+\]
+\item $WalkFront$
+\[
+  \textrm{fitness}\_w = \textrm{ maxVelocity() in 15 seconds} \qquad\qquad\quad
+\]
+\end{itemize}
+\end{itemize}
+
+%Fitness function (1 min)
+%GSL (2 min)
+\end{frame}
+
+\subsection{Walking Robot: Evolutionary Process}
+\begin{frame}
+  \frametitle{Walking Robot: Grounded Simulation Learning}
+  \begin{itemize}
+  \item Farchy $et al.$ used Grounded Simulation Learning (GSL) when evolving candidates
+  \item The point of GSL is to add human guidance in the evolution process
+  \item This is done by examining the physical robot with an evolved candidate implementation, and isolating particular attributes
+  \end{itemize}
+\end{frame}
+
 \subsection{Coordinate Tracking Robot: Evolutionary Process}
 \begin{frame}
-  \frametitle{Coordinate Tracking Robot: Simulation}
+  \frametitle{Coordinate Tracking Robot}
+  \begin{itemize}
+   \item Population of 250 candidates
+   \item Evolved for 15,000 generations
+   \item Process repeated three times for each ANN
+
+  \end{itemize}
 %Explain commands (45 sec)
 %Neural Network (45 sec)
 %Fitness function (1 min)
 %Explain nav controller (1:30 min)
 \end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Coordinate Tracking Robot: Artificial Neural Network}
+  \begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item Navigational controller consists of three ANN:
+\begin{itemize}
+\item The x-coordinate,
+\item The y-coordinate,
+\item And the angle
+\end{itemize}
+\item Inputs of the ANNs:
+\begin{itemize}
+\item Current Motor speeds
+\item Current length of time
+\item Previous Motor speeds
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/cr2.pdf}
+       \\
+    \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
+\end{column}
+\end{columns}
+%Explain commands (45 sec)
+%Neural Network (45 sec)
+%Fitness function (1 min)
+%Explain nav controller (1:30 min)
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Coordinate Tracking Robot: Fitness Function}
+\begin{itemize}
+\item Used the Mean Squared Error (MSE) as the fitness function
+\end{itemize}
+  \[
+  \textrm{fitness} = \frac{1}{N}\sum\limits_{p=1}^N\sum\limits_{i=1}^O (t_{pi} - a_{pi})^2,
+\] 
+
+\begin{itemize}
+\item N is the size of the testbed (5,000) %more?
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Coordinate Tracking Robot: Commands}
+%\begin{itemize}
+%\item A command is a data structure used by Pretorius $et al.$ is 
+%\item Commands encapsulate:
+%\begin{itemize}
+%\item Motor speeds,
+%\item Motor directions,
+%\item Time of execution
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
+
 
 \section{Results}
 \subsection{Station Keeping Robot: Results} %http://y2u.be/UufbnEGFwV4
@@ -479,6 +609,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \subsection{Walking Robot: Results}
 \begin{frame}
   \frametitle{Walking Robot: Results}
+
 \end{frame}
 
 \begin{frame}
@@ -494,6 +625,27 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \subsection{ResultsCoordRobot}
 \begin{frame}
   \frametitle{Coordinate Tracking Robot: Results}
+ \begin{itemize}
+ \item Each of the ANNs evolved for 12 hours
+ \item Pretorius $et al.$ noted that the results were reasonably accurate
+\begin{center}
+ \includegraphics[scale=1.25]{Illustrations/cr4.pdf}
+       \\
+    \only{\tiny{Bluedrakon \\ \url{http://tr.im/pWUi} }}
+\end{center}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Coordinate Tracking Robot: Navigation Test}
+\begin{itemize}
+\item Using the evolved ANNs, a navigation test was made for a practical application
+\item The test was evolved to:
+\begin{itemize}
+\item Drive the robot in a circle around a 3x3 grid,
+\item Not leave the grid or touch the middle square
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -520,13 +672,24 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \end{itemize}
 \end{frame}
 
-\section{Questions and Acknowledgments}
-\subsection{}
+\section*{Questions and Acknowledgments}
+\subsection*{}
 \begin{frame}
   \frametitle{}
-  Any Questions?
+\begin{center}
+Thank you to Nic McPhee, Elena Machkasova, and Alex Jarvis\\
+  \large Any Questions? 
+\end{center}
 
-Thank you to Nic McPhee, Elena Machkasova, and Alex Jarvis for invaluable feedback
+\end{frame}
+
+\section*{Resources}
+\subsection*{}
+\begin{frame}
+  \frametitle{}
+\begin{center}
+  \large asdghdsa 
+\end{center}
 \end{frame}
 
 \end{document}
