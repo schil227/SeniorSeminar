@@ -67,14 +67,14 @@
   \titlepage
 \end{frame}
 
-\section{Overview}
+\section*{Overview}
 \subsection*{}
 \begin{frame}
   \frametitle{The Big Picture}
   \begin{itemize}
-    \item \textbf{Problem}: Robots are faced with difficult problems
+    \item \textbf{Problem}: A robot is faced with a problem where the solution is not immediately obvious
         \item \textbf{Potential Solution}: Evolutionary computation (EC) is a process which can can solve difficult problems in programming
-        \item \textbf{Issue}: Since a robot interacts with the physical world, EC is slower by several magnitudes
+        \item \textbf{Issue}: Since a robot interacts with the physical world, EC is slower by many magnitudes 
         \item \textbf{Solution}: By using simulation and applicable evolutionary strategies, it is possible to use EC to evolve robots
   \end{itemize}
 
@@ -86,23 +86,18 @@
 %\end{frame}
 
 \section{Background}
-
-\subsection{Evolutionary Computation}
+	\subsection{Evolutionary Computation}
 \begin{frame}
-  \frametitle{Evolutionary Computation}
+\frametitle{Evolutionary Computation}
  \begin{itemize}
-  \item Evolutionary Computation (EC) is a problem solving technique which mimics natural selection
- 
-   \end{itemize}
-\end{frame}
-	
-\begin{frame}
-\frametitle{Evolutionary Computation: Requirements}
+\item Evolutionary Computation (EC) is a problem solving technique which mimics natural selection
+\item EC requires:
 \begin{itemize}
   \item A candidate representation of a potential solution
   \item A population of randomly generated candidates
   \item A fitness function
 \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -110,11 +105,8 @@
  \begin{itemize}
   \item Candidates are evaluated
   \item The best performing candidates are selected
- \begin{itemize}
-  \item Two candidates cross-over with one another
-    \item Some candidates are subject to mutation
-\end{itemize}
-  \item This process repeats until the population is recreated
+  \item Selected candidates undergo Transformations to repopulate the population
+  \item Process repeats until some limit is reached
 \end{itemize}
 \end{frame}
 
@@ -172,7 +164,7 @@
 %\end{comment}
 
 
-\subsection{``One Max'' Example}
+\subsection*{``One Max'' Example}
 \begin{frame}
   \frametitle{Example: ``One Max''}
 \begin{itemize}
@@ -202,7 +194,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Cross-Over'}
+  \frametitle{Cross-Over}
 \begin{itemize}
 \item The top 10 candidates are selected to create a new population
 \item Top candidates are randomly selected to cross-over with one another
@@ -285,7 +277,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
     \only{\tiny{Moore $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
 \end{center}
 \begin{itemize}
-\item \large Moore $et~al.$ developed the station keeping robot was 
+\item \large Moore $et~al.$ developed the station keeping robot
 \item \large Goal: to maintain position in a body of water
 \end{itemize}
 \end{frame}
@@ -354,7 +346,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \begin{columns}
   \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item  Used ODE to replicate environment and robot
+\item  Used ODE to replicate the robot
 \item  No fluid dynamics
 \end{itemize}
 \end{column}
@@ -393,7 +385,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \end{itemize}
 \end{frame}
 
-\section{EvolutionaryProcess}
+\section{Evolutionary Process}
 
 \subsection{Station Keeping Robot: Evolutionary Process}
 \begin{frame}
@@ -494,7 +486,6 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 %GSL (2 min)
 \end{frame}
 
-\subsection{Walking Robot: Evolutionary Process}
 \begin{frame}
   \frametitle{Walking Robot: Grounded Simulation Learning}
   \begin{itemize}
@@ -561,9 +552,9 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
   \textrm{fitness} = \frac{1}{N}\sum\limits_{p=1}^N\sum\limits_{i=1}^O (t_{pi} - a_{pi})^2,
 \] 
 
-\begin{itemize}
-\item N is the size of the testbed (5,000) %more?
-\end{itemize}
+%\begin{itemize}
+%\item N is the size of the testbed (5,000) %more?
+%\end{itemize}
 \end{frame}
 
 %\begin{frame}
