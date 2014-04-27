@@ -67,14 +67,14 @@
   \titlepage
 \end{frame}
 
-\section{Overview}
+\section*{Overview}
 \subsection*{}
 \begin{frame}
   \frametitle{The Big Picture}
   \begin{itemize}
-    \item \textbf{Problem}: Robots are faced with difficult problems
+    \item \textbf{Problem}: A robot is faced with a problem where the solution is not immediately obvious
         \item \textbf{Potential Solution}: Evolutionary computation (EC) is a process which can can solve difficult problems in programming
-        \item \textbf{Issue}: Since a robot interacts with the physical world, EC is slower by several magnitudes
+        \item \textbf{Issue}: Since a robot interacts with the physical world, EC is slower by many magnitudes 
         \item \textbf{Solution}: By using simulation and applicable evolutionary strategies, it is possible to use EC to evolve robots
   \end{itemize}
 
@@ -85,24 +85,100 @@
  % \frametitle{Introduce solving cases}
 %\end{frame}
 
-\section{Background}
+\section{Research Cases}
 
-\subsection{Evolutionary Computation}
+\subsection{Station Keeping Robot}
 \begin{frame}
-  \frametitle{Evolutionary Computation}
- \begin{itemize}
-  \item Evolutionary Computation (EC) is a problem solving technique which mimics natural selection
- 
-   \end{itemize}
+  \frametitle{Station Keeping Robot}
+\begin{center}
+ \includegraphics[width=0.95\textwidth]{Illustrations/sr2.pdf}
+       \\
+    \only{\tiny{Moore $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
+\end{center}
+\begin{itemize}
+\item \large Moore $et~al.$ developed the station keeping robot
+\item \large Goal: to maintain position in a body of water
+\end{itemize}
 \end{frame}
-	
+
 \begin{frame}
-\frametitle{Evolutionary Computation: Requirements}
+  \frametitle{Station Keeping Robot}
+\begin{center}
+ \includegraphics[width=0.57\textwidth]{Illustrations/sr4.pdf}
+       \\
+    \only{\tiny{Moore $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
+\end{center}
+
+\end{frame}
+
+\subsection{Walking Robot}
+\begin{frame}
+  \frametitle{Walking Robot}
+
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item  Farchy $et~al.$ modified the code of the Aldebaran Nao robot
+\item Goal: to increase walking speed
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/wr1.pdf}
+       \\
+    \only{\tiny{Farchy $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Coordinate Tracking Robot}
+\begin{frame}
+  \frametitle{Coordinate Tracking Robot}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item  Pretorius $et~al.$ created a Lego Mindstorms robot
+\item Goal: to evolve an internal navigation controller
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/cr1.pdf}
+       \\
+    \only{\tiny{ Pretorius $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Artificial Neural Networks}
+\begin{frame}
+  \frametitle{Artificial Neural Networks (ANN)}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+\begin{itemize}
+\item  ANNs are a collection of nodes with weighted edges.
+\item The purpose of the network is to develop a functional relationship from the input to the output
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/cr2.pdf}
+       \\
+     \only{\tiny{ Pretorius $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Background}
+	\subsection{Evolutionary Computation}
+\begin{frame}
+\frametitle{Evolutionary Computation}
+ \begin{itemize}
+\item Evolutionary Computation (EC) is a problem solving technique which mimics natural selection
+\item EC requires:
 \begin{itemize}
   \item A candidate representation of a potential solution
   \item A population of randomly generated candidates
   \item A fitness function
 \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -110,11 +186,8 @@
  \begin{itemize}
   \item Candidates are evaluated
   \item The best performing candidates are selected
- \begin{itemize}
-  \item Two candidates cross-over with one another
-    \item Some candidates are subject to mutation
-\end{itemize}
-  \item This process repeats until the population is recreated
+  \item Selected candidates undergo transformations to repopulate the population
+  \item Process repeats until some limit is reached
 \end{itemize}
 \end{frame}
 
@@ -172,171 +245,6 @@
 %\end{comment}
 
 
-\subsection{``One Max'' Example}
-\begin{frame}
-  \frametitle{Example: ``One Max''}
-\begin{itemize}
-\item Goal: Evolve an array consisting of the most ones from 20 candidate arrays with 10 bits
-\end{itemize}
-\[
-20 \left\{\begin{matrix}
-[  1,~1,~1,~0,~ 0,~0,~1,~0,~0,~1] \\ %inkscape, omnigraphle, googledocs? (need pdf vector graphic)
-[  0,~0,~1,~1,~ 0,~1,~1,~0,~1,~0] \\
-\cdots\\
-[  1 ,~0,~1,~0,~ 1,~1,~1,~0,~0,~0] 
-\end{matrix}\right.
-\]
-\end{frame}
-
-\begin{frame}
-  \frametitle{Fitness Evaluation}
-\begin{itemize}
-\item The fitness function $F()$ is used to calculate the fitness of each candidate
-\item In this case, the function counts the number of ones in the array
-\end{itemize}
-
-\[F([   \textcolor{red}{1},~\textcolor{red}{1},~ \textcolor{red}{1},~0,~ 0,~0,~\textcolor{red}{1},~ 0,~ 0,~ \textcolor{red}{1}]  ) = 6 \]%inkscape, omnigraphle, googledocs? (need pdf vector graphic)
-\[F([  0 ,~0,~ \textcolor{red}{1},~ \textcolor{red}{1},~ 0,~ \textcolor{red}{1},~ \textcolor{red}{1},~0,~ \textcolor{red}{1},~0]) = 4\]
-\[\cdots\]
-\[F([   \textcolor{red}{1},~0,~ \textcolor{red}{1},~0,~  \textcolor{red}{1},~ \textcolor{red}{1},~ \textcolor{red}{1},~0,~0,~0]) = 5\]
-\end{frame}
-
-\begin{frame}
-  \frametitle{Cross-Over'}
-\begin{itemize}
-\item The top 10 candidates are selected to create a new population
-\item Top candidates are randomly selected to cross-over with one another
-\end{itemize}
-
-  \begin{columns}
-  \begin{column}{0.5\textwidth}
-
-\[
-C_1=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0},|  \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
-\]
-\[C_2=[  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1},| \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
-\]
-\end{column}
- \begin{column}{0.5\textwidth}
-
-   \[
-C_x=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{0} ]
-\]
-\[C_y = [  \textcolor{blue}{0}, \textcolor{blue}{0}, \textcolor{blue}{1}, \textcolor{blue}{1}, \textcolor{red}{0},  \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1} ]
-\]
-  \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Mutation}
-\begin{itemize}
-  \item Some created candidates may undergo mutation:
-\end{itemize}
-\[
-C_x=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0} ]
-\]
-\[C_x'=[ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1},  \textcolor{red}{0}, \textcolor{blue}{1}, \textcolor{red}{1}, \textcolor{red}{1}, \textcolor{red}{0}, \textcolor{red}{1}, \textcolor{red}{0} ]
-\]
-\end{frame}
-
-\begin{frame}
-  \frametitle{Repeat}
-\begin{itemize}
-  \item Once the population is recreated, the process repeats until eventually a limit is reached
-  \item In this case, the limit would be iterations, time, or finding an array of all 1's
-\end{itemize}
-\[
-F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{red}{1}, \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{red}{1}, 0 ]) = 7
-\]
-\[F([  0, 0, \textcolor{red}{1}, \textcolor{red}{1}, 0,  0, \textcolor{red}{1}, 0, 0, \textcolor{red}{1} ]) = 4
-\]
-\[\cdots\]
-\[F([  \textcolor{red}{1}, 0, \textcolor{red}{1}, \textcolor{red}{1}, 0,  \textcolor{red}{1}, 0, 0, \textcolor{red}{1}, \textcolor{red}{1} ]) = 6
-\]
-\end{frame}
-
-\subsection{Artificial Neural Networks}
-\begin{frame}
-  \frametitle{Artificial Neural Networks (ANN)}
-\begin{columns}
-  \begin{column}{0.5\textwidth}
-\begin{itemize}
-\item  ANNs are a collection of nodes with weighted vertices.
-\item The purpose of the network is to develop a functional relationship from the input to the output
-\end{itemize}
-\end{column}
-\begin{column}{0.5\textwidth}
- \includegraphics[width=0.95\textwidth]{Illustrations/cr2.pdf}
-       \\
-     \only{\tiny{ Pretorius $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
-\end{column}
-\end{columns}
-\end{frame}
-
-\section{Research Cases}
-
-\subsection{Station Keeping Robot}
-\begin{frame}
-  \frametitle{Station Keeping Robot}
-\begin{center}
- \includegraphics[width=0.95\textwidth]{Illustrations/sr2.pdf}
-       \\
-    \only{\tiny{Moore $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
-\end{center}
-\begin{itemize}
-\item \large Moore $et~al.$ developed the station keeping robot was 
-\item \large Goal: to maintain position in a body of water
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Station Keeping Robot}
-\begin{center}
- \includegraphics[width=0.57\textwidth]{Illustrations/sr4.pdf}
-       \\
-    \only{\tiny{Moore $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
-\end{center}
-
-\end{frame}
-
-\subsection{Walking Robot}
-\begin{frame}
-  \frametitle{Walking Robot}
-
-\begin{columns}
-  \begin{column}{0.5\textwidth}
-\begin{itemize}
-\item  Farchy $et~al.$ modified the code of the Aldebaran Nao robot
-\item Goal: to increase walking speed
-\end{itemize}
-\end{column}
-\begin{column}{0.5\textwidth}
- \includegraphics[width=0.95\textwidth]{Illustrations/wr1.pdf}
-       \\
-    \only{\tiny{Farchy $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
-\end{column}
-\end{columns}
-\end{frame}
-
-\subsection{Coordinate Tracking Robot}
-\begin{frame}
-  \frametitle{Coordinate Tracking Robot}
-\begin{columns}
-  \begin{column}{0.5\textwidth}
-\begin{itemize}
-\item  Pretorius $et~al.$ created a Lego Mindstorms robot
-\item Goal: to evolve an internal navigation controller
-\end{itemize}
-\end{column}
-\begin{column}{0.5\textwidth}
- \includegraphics[width=0.95\textwidth]{Illustrations/cr1.pdf}
-       \\
-    \only{\tiny{ Pretorius $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
-\end{column}
-\end{columns}
-\end{frame}
-
 \section{Simulation}
 
 \subsection{}
@@ -344,17 +252,17 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \frametitle{Simulation}
 \begin{itemize}
 \item Defined as representing the characteristics or behaviors of one system through the use of another
-\item Error caused from inaccuracies of simulation is known as Transitivity 
+\item Error caused from inaccuracies of simulation is known as transitivity 
 \end{itemize}
 \end{frame}
 
-\subsection{Station Keeping Robot: Simulation}
+\subsection*{Station Keeping Robot: Simulation}
 \begin{frame}
   \frametitle{Station Keeping Robot: Simulation}
 \begin{columns}
   \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item  Used ODE to replicate environment and robot
+\item  Used ODE to replicate the robot
 \item  No fluid dynamics
 \end{itemize}
 \end{column}
@@ -366,7 +274,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \end{columns}
 \end{frame}
 
-\subsection{Walking Robot: Simulation}
+\subsection*{Walking Robot: Simulation}
 \begin{frame}
   \frametitle{Walking Robot: Simulation}
 \begin{columns}
@@ -384,25 +292,36 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \end{columns}
 \end{frame}
 
-\subsection{Coordinate Tracking Robot: Simulation}
+\subsection*{Coordinate Tracking Robot: Simulation}
 \begin{frame}
   \frametitle{Coordinate Tracking Robot: Simulation}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
 \begin{itemize}
 \item An overhead camera captured heading/orientation of robot from arbitrary motor commands
-\item A testbed of 5000 commands were sent to the robot and captured by the camera, creating map of command and position
+\item A testbed of 5,000 commands were sent to the robot and captured by the camera, creating map of command and position
 \end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+ \includegraphics[width=0.95\textwidth]{Illustrations/cr1.pdf}
+       \\
+    \only{\tiny{ Pretorius $et~al.$}}% \\ \url{http://tr.im/pWUi} }}
+\end{column}
+\end{columns}
+
 \end{frame}
 
-\section{EvolutionaryProcess}
+\section{Evolutionary Process}
 
-\subsection{Station Keeping Robot: Evolutionary Process}
+\subsection*{Station Keeping Robot: Evolutionary Process}
 \begin{frame}
   \frametitle{Station Keeping Robot}
 \begin{itemize}
 \item Evolved a separate candidate for each of the trials
 \item Population size of 100 candidates
-\item Evolved for 2000 generations
+\item Evolved for 2,000 generations
 \item The entire process was repeated 25 times for each of the four trials
+\item Total: 20,000,000 runs
 \end{itemize}
 \end{frame}
 
@@ -439,9 +358,6 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 					  \textrm{distance}_t(x, y, z), & \textrm{ otherwise}
 		\end{cases}
 \]
-\begin{itemize}
-\item After a 60 second setup phase, fitness was evaluated every 250ms for 60 seconds
-\end{itemize}
 \end{frame}
 
 %\begin{frame}
@@ -459,7 +375,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 %\end{itemize}
 %\end{frame}
 
-\subsection{Walking Robot: Evolutionary Process}
+\subsection*{Walking Robot: Evolutionary Process}
 \begin{frame}
   \frametitle{Walking Robot: Parameter optimization}
 \begin{itemize}
@@ -479,13 +395,13 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \begin{itemize}
 \item Used two fitness functions for two separate runs
 \begin{itemize}
-\item $omniWalk$
+\item $omniWalk$ 
 \[
-  \textrm{fitness}\_g = (\sum_{t} (\textrm{DistanceTraveled}_t)) - \textrm{fallingPenalty}
+  \textrm{fitness} = (\sum_{t} (\textrm{DistanceTraveled}_t)) - \textrm{fallingPenalty}
 \]
 \item $WalkFront$
 \[
-  \textrm{fitness}\_w = \textrm{ maxVelocity() in 15 seconds} \qquad\qquad\quad
+  \textrm{fitness} = \textrm{ maxVelocity() in 15 seconds} \qquad\qquad\quad
 \]
 \end{itemize}
 \end{itemize}
@@ -494,7 +410,6 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 %GSL (2 min)
 \end{frame}
 
-\subsection{Walking Robot: Evolutionary Process}
 \begin{frame}
   \frametitle{Walking Robot: Grounded Simulation Learning}
   \begin{itemize}
@@ -504,13 +419,14 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
   \end{itemize}
 \end{frame}
 
-\subsection{Coordinate Tracking Robot: Evolutionary Process}
+\subsection*{Coordinate Tracking Robot: Evolutionary Process}
 \begin{frame}
   \frametitle{Coordinate Tracking Robot}
   \begin{itemize}
    \item Population of 250 candidates
    \item Evolved for 15,000 generations
    \item Process repeated three times for each ANN
+   \item Total: 11,250,000 runs
 
   \end{itemize}
 %Explain commands (45 sec)
@@ -519,24 +435,22 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 %Explain nav controller (1:30 min)
 \end{frame}
 
-
-
 \begin{frame}
   \frametitle{Coordinate Tracking Robot: Artificial Neural Network}
   \begin{columns}
   \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item Navigational controller consists of three ANN:
-\begin{itemize}
-\item The x-coordinate,
-\item The y-coordinate,
-\item And the angle
-\end{itemize}
 \item Inputs of the ANNs:
 \begin{itemize}
 \item Current Motor speeds
 \item Current length of time
 \item Previous Motor speeds
+\end{itemize}
+\item The ANN output was either:
+\begin{itemize}
+\item The x-coordinate,
+\item The y-coordinate,
+\item And the angle
 \end{itemize}
 \end{itemize}
 \end{column}
@@ -563,6 +477,9 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 
 \begin{itemize}
 \item N is the size of the testbed (5,000) %more?
+\item O is the ANN (1,2,3)
+\item t is the expected output (computed by ANN)
+\item a is the actual (testbed value)
 \end{itemize}
 \end{frame}
 
@@ -581,7 +498,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 
 
 \section{Results}
-\subsection{Station Keeping Robot: Results} %http://y2u.be/UufbnEGFwV4
+\subsection*{Station Keeping Robot: Results} %http://y2u.be/UufbnEGFwV4
 \begin{frame}
   \frametitle{Station Keeping Robot: Results}
   \begin{center}
@@ -595,6 +512,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
   \end{itemize}
 \end{frame}
 
+\subsection*{Walking Robot: Results}
 \begin{frame}
   \frametitle{Walking Robot: Results}
 
@@ -605,7 +523,7 @@ F([ \textcolor{red}{1},  \textcolor{red}{1}, \textcolor{red}{1}, 0, \textcolor{r
 \end{center}
 \end{frame}
 
-\subsection{ResultsCoordRobot}
+\subsection*{Coordinate Tracking Robot: Results}
 \begin{frame}
   \frametitle{Coordinate Tracking Robot: Results}
  \begin{itemize}
