@@ -148,13 +148,17 @@
 \end{columns}
 \end{frame}
 
+
+\section{Background}
+
 \subsection{Artificial Neural Networks}
 \begin{frame}
   \frametitle{Artificial Neural Networks (ANN)}
 \begin{columns}
   \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item  ANNs are a collection of nodes with weighted edges.
+\item ANNs are a collection of nodes with weighted edges.
+\item Input values are altered as they pass though nodes in the hidden layer based on the weights
 \item The purpose of the network is to develop a functional relationship from the input to the output
 \end{itemize}
 \end{column}
@@ -166,7 +170,6 @@
 \end{columns}
 \end{frame}
 
-\section{Background}
 	\subsection{Evolutionary Computation}
 \begin{frame}
 \frametitle{Evolutionary Computation}
@@ -262,7 +265,7 @@
 \begin{columns}
   \begin{column}{0.5\textwidth}
 \begin{itemize}
-\item  Used ODE to replicate the robot
+\item  Used Open Dynamics Engine (ODE) to replicate the robot
 \item  No fluid dynamics
 \end{itemize}
 \end{column}
@@ -321,7 +324,7 @@
 \item Population size of 100 candidates
 \item Evolved for 2,000 generations
 \item The entire process was repeated 25 times for each of the four trials
-\item Total: 20,000,000 runs
+\item Total: 20,000,000 runs (76.1 years real time)
 \end{itemize}
 \end{frame}
 
@@ -566,31 +569,58 @@
 \item By using a simulation, the evolutionary process can occur at a significantly faster rate
 \item Evolutionary robotics could be applied if:
  \begin{itemize}
-\item the robotics problem is well defined, %solution is not apparent?
+\item the robotics problem is well defined,
 \item the robot and environment can be simulated,
-\item and the simulated robot's success can be quantified
+\item and an appropriate fitness function can be constructed
 \end{itemize}
 \end{itemize}
-\end{frame}
-
-\section*{Questions and Acknowledgments}
-\subsection*{}
-\begin{frame}
-  \frametitle{}
-\begin{center}
-Thank you to Nic McPhee, Elena Machkasova, and Alex Jarvis\\
-  \large Any Questions? 
-\end{center}
-
 \end{frame}
 
 \section*{Resources}
 \subsection*{}
 \begin{frame}
-  \frametitle{}
-\begin{center}
-  \large asdghdsa 
-\end{center}
+\begin{thebibliography}{lskdjf}
+	
+	\bibitem{Farchy}
+A. Farchy, S. Barrett, P. MacAlpine, and P. Stone.
+\newblock Humanoid robots learning to walk faster: From the real world to simulation and back.
+\newblock In Proceedings of the 2013 International Conference on Autonomous Agents and Multi-agent Systems, AAMAS '13, pages 39-46, Richland, SC, 2013.
+	
+	\bibitem{Moore}
+	J. M. Moore, A. J. Clark, and P. K. McKinley.
+\newblock Evolution of station keeping as a response to flows in an aquatic robot.
+\newblock In Proceeding of the Fifteenth Annual Conference on Genetic and Evolutionary Computation Confrence, GECCO '13, pages 239-246, New York, NY, USA, 2013. ACM.
+  
+\bibitem{Pretorius}
+	C. J. Pretorius, M. C. du Plessis,  and C. B. Cilliers.
+\newblock Towards an artificial neural network-based simulator for behavioral evolution in evolutionary robotics.
+\newblock In Proceedings of the 2009 Annual Research Conference of the South African Institute of Computer Scientists and Information Technologists, SAICSIT '09, pages 170-178, New York, NY, USA, 2009. ACM.
+  	\end{thebibliography}
 \end{frame}
+
+\section*{Questions and Contact Info}
+\subsection*{}
+\begin{frame}
+	%\frametitle{Thanks!}
+	
+	Thank you for your time and attention!
+		
+	\linespace
+	\linespace
+	
+	Contact:  
+	\begin{itemize}
+		\item \texttt{schil227@morris.umn.edu}
+	\end{itemize}
+	
+	\linespace
+	\linespace
+	
+	\begin{center}
+	{\huge Questions?}
+	\end{center}
+\end{frame}
+
+
 
 \end{document}
